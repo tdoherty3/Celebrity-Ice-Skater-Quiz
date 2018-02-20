@@ -1,18 +1,19 @@
 $(document).ready(function() {
-  $("form#insurance").submit(function(event) {
+  $("form#choice").submit(function(event) {
     var age = parseInt($("input#age").val());
     var gender = $("select#gender").val();
+    var spice-meter = $("select#spice-meter").val();
 
-    if (age) {
-      var quote = (100 - age) * 3;
-      if (gender === 'male' && age < 26) {
-        quote += 50;
+      if (gender === 'female' && spice-meter === 'sassy')
+      else if (gender === 'female' && spice-meter === 'cool') {
+      else if (gender === 'male' && spice-meter === 'cool') {
+      else if (gender === 'male' && spice-meter === 'sassy') {
+
       }
 
       $("#rate").empty().append(quote);
       $("#quote").show();
-    } else {
-      alert('Please enter your age.');
+    
     }
 
     event.preventDefault();
